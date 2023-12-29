@@ -20,22 +20,22 @@ end
 element_name = elements[element]
 element_id = "chemlib:" .. string.lower(elements[element])
 
-ga = element / 64
+ga = element // 64
 remainder = element - ga * 64
 
-ge = remainder / 32
+ge = remainder // 32
 remainder = remainder - ge * 32
 
-s = remainder / 16
+s = remainder // 16
 remainder = remainder - s * 16
 
-o = remainder / 8
+o = remainder // 8
 remainder = remainder - o * 8
 
-be = remainder / 4
+be = remainder // 4
 remainder = remainder - be * 4
 
-he = remainder / 2
+he = remainder // 2
 h = element % 2
 
 print("You will need")
