@@ -1,12 +1,12 @@
 args = {...}
-print("I will listen to commands on channel ".. args[1])
+print("I will listen for " .. args[1] .. " commands")
 
 -- Connect modem
 rednet.open("right")
 
 -- Wait for commands
 while true do
-	local id, msg, dist = rednet.receive(args[1])
+	id, msg = rednet.receive("HolProtocol")
 	print("Received command: " .. msg)
 	loadstring(msg)()
 end

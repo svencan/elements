@@ -1,5 +1,4 @@
 rednet.open("top")
--- Modem channels 1 = hol, 2 = mach
 
 args = {...}
 
@@ -15,7 +14,7 @@ oxygen_total = oxygen_part * amount
 print("We will need " .. oxygen_total .. " oxygen and " .. hydrogen_total .. " hydrogen.")
 
 command = "hol " .. hydrogen_total .. " " .. oxygen_total
-rednet.send(1, command)
+rednet.broadcast(command, "HolProtocol")
 print("Sending command: " .. command)
 
 rednet.close("top")

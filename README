@@ -16,7 +16,7 @@ delete hol.lua
 delete listener.lua
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/hol.lua hol.lua)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/listener.lua listener.lua)
-shell.run("listener 1")
+shell.run("listener HolProtocol")
 ```
 
 Then save, exit, and type `reboot`.
