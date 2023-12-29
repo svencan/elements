@@ -18,7 +18,7 @@ while remaining > 0 do
 	turtle.select(2)
 	turtle.suck()
 
-	if turtle.getItemCount() > 0:
+	if turtle.getItemCount() > 0 then
 		slot_data = turtle.getItemDetail()
 		print("Picked up " .. slot_data.name)
 
