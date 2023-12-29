@@ -12,7 +12,7 @@ function fuse(source)
 	turtle.turnRight()
 	turtle.suck()
 	taken = turtle.getItemCount()
-	if taken % 2 = 1 then
+	if taken % 2 == 1 then
 		turtle.drop(1)
 	end
 
