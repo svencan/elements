@@ -1,8 +1,8 @@
 Request computer setup:
 ```
 cd /
-edit startup
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua startup)
+edit startup.lua
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua gib.lua)
 ```
 
 Then save, exit, and type `reboot`.
@@ -10,8 +10,8 @@ Then save, exit, and type `reboot`.
 Turtle setup:
 ```
 cd /
-edit startup
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/hol.lua startup)
+edit startup.lua
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/hol.lua hol.lua)
 ```
 
 Then save, exit, and type `reboot`.
