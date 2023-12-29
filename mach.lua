@@ -38,7 +38,6 @@ while remaining > 0 do
 	turtle.forward()
 	turtle.forward()
 	turtle.forward()
-	turtle.forward()
 	turtle.turnRight()
 
 	-- Drop slot 1 and 2
@@ -46,7 +45,6 @@ while remaining > 0 do
 	turtle.drop()
 	turtle.select(2)
 	turtle.drop()
-	turtle.turnRight()
 	turtle.turnRight()
 
 	-- Back to start
