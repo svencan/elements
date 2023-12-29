@@ -28,5 +28,6 @@ while hydro do
 	turtle.turnLeft()
 	turtle.forward()
 	turtle.drop(1)
+end
 
 print("I collected all the hydrogen.")
