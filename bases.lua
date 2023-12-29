@@ -1,7 +1,3 @@
-turtle.select(1)
-turtle.refuel()
-turtle.select(10)
-
 function fuse(source)
 	-- move to source drawer
 	destination = source + 1
@@ -14,6 +10,7 @@ function fuse(source)
 	end
 
 	-- take an even amount of elements
+	turtle.select(10)
 	turtle.turnRight()
 	turtle.suck()
 	taken = turtle.getItemCount()
@@ -85,8 +82,17 @@ function fuse(source)
 	turtle.turnLeft()
 end
 
+function refuel()
+	turtle.turnRight()
+	turtle.select(1)
+	turtle.suck()
+	turtle.refuel()
+	turtle.turnLeft()
+end
+
 
 while true do
+	refuel()
 	fuse(0)
 	fuse(3)
 	fuse(0)
