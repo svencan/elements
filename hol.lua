@@ -17,7 +17,7 @@ while hydrogen > 0 or oxygen > 0 do
 	turtle.select(10)
 	turtle.forward()
 	turtle.turnLeft()
-	turtle.suck(hydrogen)
+	turtle.suck(math.min(hydrogen, 64))
 	hydrogen = hydrogen - turtle.getItemCount()
 	print("Picked " .. turtle.getItemCount() .. " hydrogen")
 	turtle.turnRight()
@@ -26,7 +26,7 @@ while hydrogen > 0 or oxygen > 0 do
 	turtle.select(11)
 	turtle.forward()
 	turtle.turnLeft()
-	turtle.suck(oxygen)
+	turtle.suck(math.min(oxygen, 64))
 	oxygen = oxygen - turtle.getItemCount()
 	print("Picked " .. turtle.getItemCount() .. " oxygen")
 
