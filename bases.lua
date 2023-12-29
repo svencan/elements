@@ -9,6 +9,7 @@ function fuse(source)
 
 	while source > 0 do
 		turtle.forward()
+		source = source - 1
 	end
 
 	-- take an even amount of elements
