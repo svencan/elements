@@ -16,6 +16,7 @@ function fuse(source)
 	taken = turtle.getItemCount()
 	if taken % 2 == 1 then
 		turtle.drop(1)
+		taken = taken - 1
 	end
 
 	-- move to fusion reactor input chest
