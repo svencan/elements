@@ -1,1 +1,2 @@
-print("Hello world (hol.lua)")
+turtle.refuel()
+print("Hello world (hol.lua).")
