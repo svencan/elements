@@ -21,6 +21,7 @@ while remaining > 0 do
 	if turtle.getItemCount() > 0 then
 		slot_data = turtle.getItemDetail()
 		print("Picked up " .. slot_data.name)
+		dump(slot_data)
 	end
 
 	-- go to final chest
@@ -53,3 +54,17 @@ while remaining > 0 do
 	turtle.forward()
 	turtle.forward()
 end
+
+
+function dump(o)
+	if type(o) == 'table' then
+	   local s = '{ '
+	   for k,v in pairs(o) do
+		  if type(k) ~= 'number' then k = '"'..k..'"' end
+		  s = s .. '['..k..'] = ' .. dump(v) .. ','
+	   end
+	   return s .. '} '
+	else
+	   return tostring(o)
+	end
+ end
