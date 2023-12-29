@@ -7,14 +7,15 @@ function fuse(source)
 	destination = source + 1
 	turtle.turnLeft()
 
-	while source > 0 do
+	source_remaining = source
+	while source_remaining > 0 do
 		turtle.forward()
-		source = source - 1
+		source_remaining = source_remaining - 1
 	end
 
 	-- take an even amount of elements
 	turtle.turnRight()
-	turtle.suck()
+	turtle.suck(8)
 	taken = turtle.getItemCount()
 	if taken % 2 == 1 then
 		turtle.drop(1)
@@ -53,7 +54,7 @@ function fuse(source)
 	expected_elements = taken / 2
 	while turtle.getItemCount() < expected_elements do
 		turtle.suck()
-		sleep(10)  -- wait for fusion to completely finish
+		sleep(1)  -- wait for fusion to completely finish
 	end
 
 	-- move to destination
