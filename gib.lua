@@ -1,4 +1,4 @@
-modem = peripheral.wrap("top")
+rednet.open("top")
 -- Modem channels 1 = hol, 2 = mach
 
 args = {...}
@@ -14,7 +14,8 @@ oxygen_total = oxygen_part * amount
 
 print("We will need " .. oxygen_total .. " oxygen and " .. hydrogen_total .. " hydrogen.")
 
-modem.open(1)
 command = "hol " .. hydrogen_total .. " " .. oxygen_total
+rednet.send(1, command)
 print("Sending command: " .. command)
-modem.transmit(1, 1, command)
+
+rednet.close("top")
