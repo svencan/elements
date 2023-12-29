@@ -15,4 +15,6 @@ oxygen_total = oxygen_part * amount
 print("We will need " .. oxygen_total .. " oxygen and " .. hydrogen_total .. " hydrogen.")
 
 modem.open(1)
-modem.
+command = "hol " .. hydrogen_total .. " " .. oxygen_total
+print("Sending command: " .. command)
+modem.transmit(1, 1, command)
