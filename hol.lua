@@ -18,7 +18,7 @@ while hydro do
 	turtle.turnLeft()
 	turtle.forward()
 	turtle.turnLeft()
-	turtle.suck(1)
+	turtle.suck(hydro)
 
 	picked = turtle.getItemCount()
 	print("I have "..picked.." hydrogen")
@@ -27,7 +27,7 @@ while hydro do
 
 	turtle.turnLeft()
 	turtle.forward()
-	turtle.drop(1)
+	turtle.drop(picked)
 end
 
 print("I collected all the hydrogen.")
