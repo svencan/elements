@@ -3,6 +3,7 @@ Request computer setup:
 cd /
 edit startup.lua
 delete gib.lua
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/elements.lua elements.lua)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua gib.lua)
 ```
 
@@ -14,6 +15,7 @@ cd /
 edit startup.lua
 delete hol.lua
 delete listener.lua
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/elements.lua elements.lua)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/hol.lua hol.lua)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/listener.lua listener.lua)
 shell.run("listener HolProtocol")
