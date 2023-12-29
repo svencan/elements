@@ -1,4 +1,6 @@
 turtle.select(1)
+turtle.refuel()
+turtle.select(10)
 
 function fuse(source)
 	-- move to source drawer
@@ -38,9 +40,7 @@ function fuse(source)
 	else
 		turtle.turnLeft()
 	end
-
 	
-
 	-- drop elements and move to output chest
 	turtle.drop()
 	turtle.turnLeft()
