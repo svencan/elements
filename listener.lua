@@ -8,5 +8,5 @@ rednet.open("right")
 while true do
 	id, msg, protocol = rednet.receive("HolProtocol")
 	print("Received command: " .. msg)
-	shell.run("msg")
+	shell.run(msg)
 end
