@@ -17,4 +17,8 @@ command = "hol " .. hydrogen_total .. " " .. oxygen_total
 rednet.broadcast(command, "HolProtocol")
 print("Sending command: " .. command)
 
+command = "mach " .. element .. " " .. amount
+rednet.broadcast(command, "MachProtocol")
+print("Sending command: " .. command)
+
 rednet.close("top")
