@@ -1,4 +1,4 @@
-require "elements"
+dofile("/elements.lua")
 
 -- Turn off if needfuel is off.
 turtle.refuel()

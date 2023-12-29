@@ -1,4 +1,4 @@
-require "elements"
+dofile("/elements.lua")
 
 rednet.open("top")
 
