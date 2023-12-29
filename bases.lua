@@ -15,7 +15,7 @@ function fuse(source)
 
 	-- take an even amount of elements
 	turtle.turnRight()
-	turtle.suck(8)
+	turtle.suck()
 	taken = turtle.getItemCount()
 	if taken % 2 == 1 then
 		turtle.drop(1)
