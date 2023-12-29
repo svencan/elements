@@ -21,6 +21,7 @@ while remaining > 0 do
 	if turtle.getItemCount() > 0 then
 		slot_data = turtle.getItemDetail()
 		print("Picked up " .. slot_data.name)
+	end
 
 	-- go to final chest
 	turtle.turnLeft()
