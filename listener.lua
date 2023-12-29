@@ -6,7 +6,7 @@ rednet.open("right")
 
 -- Wait for commands
 while true do
-	id, msg = rednet.receive("HolProtocol")
+	id, msg, protocol = rednet.receive("HolProtocol")
 	print("Received command: " .. msg)
 	loadstring(msg)()
 end
