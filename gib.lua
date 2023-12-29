@@ -36,7 +36,7 @@ be = remainder / 4
 remainder = remainder - be * 4
 
 he = remainder / 2
-h = h - he * 2
+h = element % 2
 
 print("You will need")
 print("  Gadolinium: " .. ga * amount)
