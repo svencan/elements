@@ -55,6 +55,7 @@ function fuse(source)
 		sleep(10)  -- wait for fusion to completely finish
 	end
 
+	-- move to destination
 	remaining_destination = destination
 
 	turtle.turnRight()
@@ -64,12 +65,15 @@ function fuse(source)
 		remaining_destination = remaining_destination - 1
 	end
 
+	-- drop elements
 	turtle.turnRight()
 	turtle.drop()
 
+	-- move back to start
+
 	remaining_start = destination
 
-	turtle.turnLeft()
+	turtle.turnRight()
 
 	while remaining_start > 0 do
 		turtle.forward()
