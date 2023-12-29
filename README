@@ -1,24 +1,19 @@
-Request computer setup:
+Bases turtle startup:
 ```
 cd /
-edit startup.lua
-delete gib.lua
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/elements.lua elements.lua)
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua gib.lua)
+shell.run("delete elements.lua")
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/bases.lua)
 ```
 
-Then save, exit, and type `reboot`.
+Then save, exit, and type `bases` to start.
 
-Turtle (hol) setup:
+Computer startup:
 ```
 cd /
-edit startup.lua
-delete hol.lua
-delete listener.lua
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/elements.lua elements.lua)
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/hol.lua hol.lua)
-shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/listener.lua listener.lua)
-shell.run("listener HolProtocol")
+shell.run("delete elements.lua")
+shell.run("delete gib.lua")
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/elements.lua)
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua)
 ```
 
-Then save, exit, and type `reboot`.
+Then save, exit, use with "gib [element-number] [amount]" or simply "gib".

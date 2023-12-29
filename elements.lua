@@ -117,3 +117,19 @@ elements[115] = "Moscovium"
 elements[116] = "Livermorium"
 elements[117] = "Tennessine"
 elements[118] = "Oganesson"
+
+-- Converts a byte to a string of 0s and 1s.
+-- https://love2d.org/forums/viewtopic.php?t=84988&start=10
+function byte2bin(n)
+	local t, d = {}, 0
+	d = math.log(n)/math.log(2) -- binary logarithm
+	if n<0 then
+		-- two's complement
+		d = d + 1
+		n = 2^d - math.abs(n)
+	end
+	for i=math.floor(d+1),0,-1 do
+		n = n % 2^i
+	end
+	return table.concat(t)
+end
