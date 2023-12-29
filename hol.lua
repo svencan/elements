@@ -4,8 +4,8 @@ print("Turtle refuelled.")
 
 
 args = {...}
-hydro = args[1]
-oxy = args[2]
+hydro = tonumber(args[1])
+oxy = tonumber(args[2])
 
 print("Requested "..args[1].." hydrogen and "..args[2].." oxygen")
 
@@ -13,7 +13,7 @@ print("Requested "..args[1].." hydrogen and "..args[2].." oxygen")
 -- Oxygen at X=1313
 -- Dropoff at X=1321
 
-while hydro do
+while hydro > 0 do
 	turtle.turnLeft()
 	turtle.turnLeft()
 	turtle.forward()
