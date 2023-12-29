@@ -1,14 +1,15 @@
 turtle.select(1)
 
 function fuse(source)
+	-- move to source drawer
 	destination = source + 1
-
 	turtle.turnLeft()
 
 	while source > 0 do
 		turtle.forward()
 	end
 
+	-- take an even amount of elements
 	turtle.turnRight()
 	turtle.suck()
 	taken = turtle.getItemCount()
@@ -16,7 +17,8 @@ function fuse(source)
 		turtle.drop(1)
 	end
 
-	offset = 2 - source   -- input is the same position as "Be"
+	-- move to fusion reactor input chest
+	offset = 2 - source
 
 	if offset < 0 then
 		turtle.turnRight()
@@ -37,10 +39,58 @@ function fuse(source)
 		turtle.turnLeft()
 	end
 
+	
+
+	-- drop elements and move to output chest
 	turtle.drop()
+	turtle.turnLeft()
+	turtle.forward()
+	turtle.forward()
+	turtle.turnRight()
+
+	-- wait for fusion to finish (input elements / 2 is the number of elements we wait for)
+	expected_elements = taken / 2
+	while turtle.getItemCount() < expected_elements do
+		turtle.suck()
+		sleep(10)  -- wait for fusion to completely finish
+	end
+
+	remaining_destination = destination
+
+	turtle.turnRight()
+
+	while remaining_destination > 0 do
+		turtle.forward()
+		remaining_destination = remaining_destination - 1
+	end
+
+	turtle.turnRight()
+	turtle.drop()
+
+	remaining_start = destination
+
+	turtle.turnLeft()
+
+	while remaining_start > 0 do
+		turtle.forward()
+		remaining_start = remaining_start - 1
+	end
+
+	turtle.turnLeft()
 end
 
 
 while true do
 	fuse(0)
+	fuse(3)
+	fuse(0)
+	fuse(1)
+	fuse(3)
+	fuse(4)
+	fuse(3)
+	fuse(4)
+	fuse(5)
+	fuse(3)
+	fuse(4)
+	fuse(6)
 end
