@@ -13,13 +13,14 @@ while remaining > 0 do
 	turtle.select(1)
 	turtle.suck()
 	
-	
 	-- take any into slot 2
 	turtle.turnLeft()
 	turtle.select(2)
 	turtle.suck()
-	slot_data = turtle.getItemDetail()
-	print("Picked up " .. slot_data.name)
+
+	if turtle.getItemCount() > 0:
+		slot_data = turtle.getItemDetail()
+		print("Picked up " .. slot_data.name)
 
 	-- go to final chest
 	turtle.turnLeft()
