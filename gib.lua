@@ -1,3 +1,6 @@
+modem = peripheral.wrap("top")
+-- Modem channels 1 = hol, 2 = mach
+
 args = {...}
 
 element = tonumber(args[1])
@@ -10,3 +13,6 @@ oxygen_part = math.floor(element / 8)
 oxygen_total = oxygen_part * amount
 
 print("We will need " .. oxygen_total .. " oxygen and " .. hydrogen_total .. " hydrogen.")
+
+modem.open(1)
+modem.

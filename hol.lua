@@ -2,6 +2,11 @@
 turtle.refuel()
 print("Turtle refuelled.")
 
+-- Connect modem
+modem = peripheral.wrap("right")
+modem.open(1)  -- Channel 1 is hol communication
+
+-- Input parameters
 args = {...}
 hydrogen = tonumber(args[1])
 oxygen = tonumber(args[2])

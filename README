@@ -2,16 +2,20 @@ Request computer setup:
 ```
 cd /
 edit startup.lua
+delete gib.lua
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua gib.lua)
 ```
 
 Then save, exit, and type `reboot`.
 
-Turtle setup:
+Turtle (hol) setup:
 ```
 cd /
 edit startup.lua
+delete hol.lua
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/hol.lua hol.lua)
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/listener.lua listener.lua)
+shell.run("listener 1")
 ```
 
 Then save, exit, and type `reboot`.
