@@ -1,2 +1,8 @@
+-- Turn off if needfuel is off.
 turtle.refuel()
-print("Hello world (hol.lua).")
+print("Turtle refuelled.")
+
+
+args = {...}
+
+print("Requested "..args[1])
