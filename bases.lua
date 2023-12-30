@@ -84,11 +84,13 @@ function fuse(source)
 end
 
 function refuel()
-	turtle.turnRight()
-	turtle.select(1)
-	turtle.suck()
-	turtle.refuel()
-	turtle.turnLeft()
+	if turtle.getItemCount() == 0 then
+		turtle.turnRight()
+		turtle.select(1)
+		turtle.suck()
+		turtle.refuel()
+		turtle.turnLeft()
+	end
 end
 
 
