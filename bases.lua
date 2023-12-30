@@ -99,10 +99,14 @@ while true do
 	fuse(0)  -- make He
 	fuse(3)  -- make S
 	fuse(0)  -- 
+	fuse(0)  -- 
 	fuse(1)  -- make Be
+	fuse(3)  -- 
 	fuse(3)  -- 
 	fuse(4)  -- make Ge
 	fuse(3)  -- 
+	fuse(3)  -- 
+	fuse(4)  -- 
 	fuse(4)  -- 
 	fuse(5)  -- make Gd
 end
