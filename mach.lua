@@ -22,18 +22,16 @@ reactor_input = peripheral.wrap("left")   -- reactor input
 end_product = peripheral.wrap("top")    -- end product
 
 while tonumber(remaining) > 0 do
-	local output_slot = 1
-
 	sleep(1.01)
 
 	if inventory_sum(reactor_input) == 0 then
 		for slot, item in pairs(reactor_output.list()) do
 			if item.count > 0 then
 				if item.name == element_id then
-					pulled = reactor_output.pushItems("top", output_slot)
+					pulled = reactor_output.pushItems("top", slot)
 					remaining = remaining - pulled
 				else
-					reactor_output.pushItems("left", output_slot)
+					reactor_output.pushItems("left", slot)
 				end
 			end
 		end

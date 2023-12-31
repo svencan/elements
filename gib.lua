@@ -64,5 +64,5 @@ end
 
 print("Finished!")
 
-chat = peripherals.wrap("bottom")
-chat.say("Finished " .. amount .. " of " .. element_name)
+chat = peripheral.wrap("bottom")
+chat.sendMessage("Finished " .. amount .. " of " .. element_name)
