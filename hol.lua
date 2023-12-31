@@ -33,8 +33,11 @@ turtle.forward()
 turtle.forward()
 turtle.turnLeft()
 
+n = 7
 for i=7, 1, -1 do
+	turtle.select(n)
 	turtle.drop()
+	n = n - 1
 end
 
 -- Refuel and take coal if necessary
