@@ -14,6 +14,7 @@ reactor_input = peripheral.wrap("left")   -- reactor input
 end_product = peripheral.wrap("top")    -- end product
 
 while tonumber(remaining) > 0 do
+	print("Checking all slots for reactor outputs")
 	local output_slot = 1
 	sleep(1.03)
 	for n=1,reactor_output.size()-1, 1 do
