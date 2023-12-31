@@ -3,11 +3,11 @@ dofile("/elements.lua")
 args = {...}
 
 element = args[1]
-amount = args[1]
+amount = args[2]
 remaining = amount
 
 element_name = elements[element]
-element_id = "chemlib:" .. string.lower(elements[element])
+element_id = "chemlib:" .. string.lower(elements[to_number(element)])
 
 reactor_output = periphals.wrap("right")  -- reactor output
 reactor_input = periphals.wrap("left")   -- reactor input
