@@ -63,3 +63,6 @@ while remaining > 0 do
 end
 
 print("Finished!")
+
+chat = peripherals.wrap("bottom")
+chat.say("Finished " .. amount .. " of " element_name)
