@@ -39,7 +39,7 @@ he = math.floor(remainder / 2)
 h = element % 2
 
 hol_command = "hol " .. " " .. h * amount .." " .. he * amount .." " .. be * amount
-hol_command = hol_command .. " " .. o * amount .." " .. s * amount .." " .. ge .." " .. ga
+hol_command = hol_command .. " " .. o * amount .." " .. s * amount .." " .. ge * amount .." " .. ga * amount
 
 print("Sending turtle (" .. hol_command .. ")")
 print("  Gadolinium: " .. ga * amount)
