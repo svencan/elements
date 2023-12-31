@@ -49,6 +49,6 @@ print("  Beryllium:  " .. be * amount)
 print("  Helium:     " .. he * amount)
 print("  Hydrogen:   " .. h * amount)
 
-rednet.open("top")
+rednet.open("back")
 rednet.broadcast(hol_command, "HolProtocol")
 rednet.close()
