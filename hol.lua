@@ -1,6 +1,6 @@
 function table_sum(table)
 	local sum = 0
-	for value in table do
+	for key, value in ipairs(table) do
 		sum = sum + tonumber(value)
 	end
 	return sum
