@@ -9,9 +9,9 @@ remaining = amount
 element_name = elements[element]
 element_id = "chemlib:" .. string.lower(elements[tonumber(element)])
 
-reactor_output = periphals.wrap("right")  -- reactor output
-reactor_input = periphals.wrap("left")   -- reactor input
-end_product = periphals.wrap("top")    -- end product
+reactor_output = peripherals.wrap("right")  -- reactor output
+reactor_input = peripherals.wrap("left")   -- reactor input
+end_product = peripherals.wrap("top")    -- end product
 
 while tonumber(remaining) > 0 do
 	local output_slot = 1
