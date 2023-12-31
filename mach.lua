@@ -17,7 +17,7 @@ while tonumber(remaining) > 0 do
 	local output_slot = 1
 	sleep(1.03)
 	for n=1,reactor_output.size()-1, 1 do
-		if reactor_output.getItemCount(output_slot) > 0 then
+		if reactor_output.getItemLimit(output_slot) < 64 then
 			details = reactor_output.getItemDetails(output_slot)
 			if details.name == element_id then
 				pulled = reactor_output.pushItems("top", output_slot)
