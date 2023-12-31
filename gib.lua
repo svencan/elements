@@ -1,6 +1,6 @@
 dofile("/elements.lua")
 
---rednet.open("top")
+--
 
 args = {...}
 
@@ -38,7 +38,9 @@ remainder = remainder - be * 4
 he = math.floor(remainder / 2)
 h = element % 2
 
-print("You will need")
+hol_command = "hol " .. " " .. h .." " .. he .." " .. be .." " .. o .." " .. s .." " .. ge .." " .. ga
+
+print("Sending turtle (" .. hol_command .. ")")
 print("  Gadolinium: " .. ga * amount)
 print("  Germanium:  " .. ge * amount)
 print("  Sulfur:     " .. s * amount)
@@ -46,3 +48,7 @@ print("  Oxygen:     " .. o * amount)
 print("  Beryllium:  " .. be * amount)
 print("  Helium:     " .. he * amount)
 print("  Hydrogen:   " .. h * amount)
+
+rednet.open("top")
+rednet.broadcast(hol_command, "HolProtocol")
+rednet.close()
