@@ -30,4 +30,4 @@ while tonumber(remaining) > 0 do
 	end
 end
 
-print("Finished everything")
+print("Finished producing " .. amount .. " " .. element_name)
