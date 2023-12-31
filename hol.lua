@@ -9,12 +9,12 @@ end
 -- Input parameters
 args = {...}
 
-turtle.turnLeft()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-
 while table_sum(args) > 0 do
+	turtle.turnLeft()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+
 	-- take from drawers
 	local n = 7
 	for i=7, 1, -1 do
