@@ -15,6 +15,7 @@ turtle.forward()
 turtle.forward()
 
 while table_sum(args) > 0 do
+	-- take from drawers
 	local n = 7
 	for i=7, 1, -1 do
 		turtle.forward()
@@ -27,27 +28,29 @@ while table_sum(args) > 0 do
 		end
 		n = n - 1
 	end
-end
 
-turtle.turnRight()
-turtle.turnRight()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.forward()
-turtle.turnLeft()
+	-- go back to reactor input
+	turtle.turnRight()
+	turtle.turnRight()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.forward()
+	turtle.turnLeft()
 
-n = 7
-for i=7, 1, -1 do
-	turtle.select(n)
-	turtle.drop()
-	n = n - 1
+	-- drop everything (slots 1 - 7)
+	n = 7
+	for i=7, 1, -1 do
+		turtle.select(n)
+		turtle.drop()
+		n = n - 1
+	end
 end
 
 -- Refuel and take coal if necessary
