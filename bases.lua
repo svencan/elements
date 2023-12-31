@@ -106,6 +106,8 @@ while true do
 	fuse(4)  -- make Ge
 	fuse(3)  -- 
 	fuse(3)  -- 
+	fuse(3)  -- 
+	fuse(3)  -- 
 	fuse(4)  -- 
 	fuse(4)  -- 
 	fuse(5)  -- make Gd

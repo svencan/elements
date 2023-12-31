@@ -1,7 +1,9 @@
 Bases turtle startup:
 ```
 cd /
-shell.run("delete elements.lua")
+sleep(1.1)
+shell.run("delete bases.lua")
+sleep(1.1)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/bases.lua)
 ```
 
@@ -10,10 +12,17 @@ Then save, exit, and type `bases` to start.
 Computer startup:
 ```
 cd /
+sleep(1.2)
 shell.run("delete elements.lua")
+sleep(1.2)
 shell.run("delete gib.lua")
+sleep(1.2)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/elements.lua)
+sleep(1.2)
 shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/gib.lua)
+sleep(1.2)
+shell.run("wget https://raw.githubusercontent.com/svencan/elements/master/sort.lua)
 ```
 
 Then save, exit, use with "gib [element-number] [amount]" or simply "gib".
+Run sort in a second tab, otherwise the production doesn't finish.
