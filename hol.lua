@@ -8,7 +8,7 @@ turtle.forward()
 
 for i=7, 1, -1 do
 	turtle.forward()
-	if args[i] > 0 then
+	if tonumber(args[i]) > 0 then
 		turtle.select(7)
 		turtle.turnRight()
 		turtle.suck(math.min(args[7], 64))
