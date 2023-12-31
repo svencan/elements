@@ -38,9 +38,6 @@ remainder = remainder - be * 4
 he = math.floor(remainder / 2)
 h = element % 2
 
-hol_command = "hol " .. " " .. h * amount .." " .. he * amount .." " .. be * amount
-hol_command = hol_command .. " " .. o * amount .." " .. s * amount .." " .. ge * amount .." " .. ga * amount
-
 print("Sending turtle (" .. hol_command .. ")")
 print("  Gadolinium: " .. ga * amount)
 print("  Germanium:  " .. ge * amount)
@@ -50,8 +47,19 @@ print("  Beryllium:  " .. be * amount)
 print("  Helium:     " .. he * amount)
 print("  Hydrogen:   " .. h * amount)
 
-rednet.open("back")
-rednet.broadcast(hol_command, "HolProtocol")
-rednet.close()
+remaining = amount
 
-shell.run("mach " .. element .. " " .. amount)
+while remaining > 0 do
+	batch = remaining % 64
+	remaining = remaining - batch
+	hol_command = "hol " .. " " .. h * batch .." " .. he * batch .." " .. be * batch
+	hol_command = hol_command .. " " .. o * batch .." " .. s * batch .." " .. ge * batch .." " .. ga * batch
+
+	rednet.open("back")
+	rednet.broadcast(hol_command, "HolProtocol")
+	rednet.close()
+
+	shell.run("mach " .. element .. " " .. batch)
+end
+
+print("Finished!")
