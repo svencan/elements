@@ -41,7 +41,7 @@ h = element % 2
 remaining = amount
 
 while remaining > 0 do
-	batch = remaining % 64
+	batch = math.min(64, remaining)
 	remaining = remaining - batch
 	hol_command = "hol " .. " " .. h * batch .." " .. he * batch .." " .. be * batch
 	hol_command = hol_command .. " " .. o * batch .." " .. s * batch .." " .. ge * batch .." " .. ga * batch

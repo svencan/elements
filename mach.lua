@@ -2,7 +2,7 @@ dofile("/elements.lua")
 
 function inventory_sum(inventory)
 	local sum = 0
-	for slot, item in pars(inventory.list()) do
+	for slot, item in pairs(inventory.list()) do
 		sum = sum + item.count
 	end
 	return sum
