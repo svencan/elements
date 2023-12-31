@@ -7,14 +7,16 @@ turtle.forward()
 turtle.forward()
 
 for i=7, 1, -1 do
+	local n = 7
 	turtle.forward()
-	if tonumber(args[i]) > 0 then
-		turtle.select(7)
+	if tonumber(args[n]) > 0 then
+		turtle.select(n)
 		turtle.turnRight()
-		turtle.suck(math.min(args[7], 64))
-		args[7] = args[7] - turtle.getItemCount()
+		turtle.suck(math.min(args[n], 64))
+		args[n] = args[n] - turtle.getItemCount()
 		turtle.turnLeft()
 	end
+	n = n - 1
 end
 
 turtle.turnRight()
