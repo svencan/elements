@@ -54,4 +54,4 @@ rednet.open("back")
 rednet.broadcast(hol_command, "HolProtocol")
 rednet.close()
 
-shell.run("bg mach " .. element .. " " .. amount)
+shell.run("mach " .. element .. " " .. amount)
