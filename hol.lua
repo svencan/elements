@@ -1,3 +1,11 @@
+function table_sum(table)
+	local sum = 0
+	for value in table do
+		sum = sum + tonumber(value)
+	end
+	return sum
+end
+
 -- Input parameters
 args = {...}
 
@@ -6,7 +14,7 @@ turtle.forward()
 turtle.forward()
 turtle.forward()
 
-while args[1] > 0 or args[2] > 0 or args[3] > 0 or args[4] > 0 or args[5] > 0 or args[6] > 0 or args[7] > 0 do
+while table_sum(args) > 0 do
 	local n = 7
 	for i=7, 1, -1 do
 		turtle.forward()
