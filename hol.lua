@@ -6,8 +6,8 @@ turtle.forward()
 turtle.forward()
 turtle.forward()
 
+local n = 7
 for i=7, 1, -1 do
-	local n = 7
 	turtle.forward()
 	if tonumber(args[n]) > 0 then
 		turtle.select(n)
